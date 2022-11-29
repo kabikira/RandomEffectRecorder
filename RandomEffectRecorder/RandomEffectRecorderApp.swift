@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct R_E_RApp: App {
+struct RandomEffectRecorderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

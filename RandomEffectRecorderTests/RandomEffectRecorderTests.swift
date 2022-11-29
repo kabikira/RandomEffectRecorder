@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import R_E_R
+@testable import RandomEffectRecorder
 
 final class R_E_RTests: XCTestCase {
 

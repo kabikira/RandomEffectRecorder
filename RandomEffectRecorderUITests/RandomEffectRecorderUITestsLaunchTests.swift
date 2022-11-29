@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class R_E_RUITestsLaunchTests: XCTestCase {
+final class RandomEffectRecorderUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
