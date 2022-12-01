@@ -1,6 +1,6 @@
 //
-//  R_E_RApp.swift
-//  R.E.R
+//  RandomEffectsRecorderApp.swift
+//  RandomEffectsRecorder
 //
 //  Created by koala panda on 2022/11/28.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct RandomEffectRecorderApp: App {
+struct RandomEffectsRecorderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

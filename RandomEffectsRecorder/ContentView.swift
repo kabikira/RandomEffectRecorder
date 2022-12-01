@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  R.E.R
+// RandomEffectsRecorder
 //
 //  Created by koala panda on 2022/11/28.
 //

@@ -1,6 +1,6 @@
 //
 //  AudioRecorder.swift
-//  RandomEffectRecorder
+//  RandomEffectsRecorder
 //
 //  Created by koala panda on 2022/11/29.
 //

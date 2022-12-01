@@ -37,18 +37,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B1450CC2934F80A003C5A90 /* RandomEffectRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomEffectRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1450CC2934F80A003C5A90 /* RandomEffectsRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomEffectsRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1450CF2934F80A003C5A90 /* RandomEffectRecorderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEffectRecorderApp.swift; sourceTree = "<group>"; };
 		3B1450D12934F80A003C5A90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3B1450D32934F80C003C5A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B1450D62934F80C003C5A90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3B1450DC2934F80C003C5A90 /* RandomEffectRecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomEffectRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1450DC2934F80C003C5A90 /* RandomEffectsRecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomEffectsRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1450E02934F80C003C5A90 /* RandomEffectRecorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEffectRecorderTests.swift; sourceTree = "<group>"; };
-		3B1450E62934F80C003C5A90 /* RandomEffectRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomEffectRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1450E62934F80C003C5A90 /* RandomEffectsRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomEffectsRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1450EA2934F80C003C5A90 /* RandomEffectRecorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEffectRecorderTests.swift; sourceTree = "<group>"; };
 		3B1450EC2934F80C003C5A90 /* RandomEffectRecorderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEffectRecorderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3B1450FB29358FC9003C5A90 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = ../../RandomEffectsVoiceRecorder/RandomEffectsVoiceRecorder/Colors.xcassets; sourceTree = "<group>"; };
-		3B1451012935FAD1003C5A90 /* RandomEffectRecorderInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RandomEffectRecorderInfo.plist; sourceTree = SOURCE_ROOT; };
+		3B1451012935FAD1003C5A90 /* RandomEffectsRecorderInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RandomEffectsRecorderInfo.plist; sourceTree = SOURCE_ROOT; };
 		3B14510A2936387C003C5A90 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		3B14510C29363973003C5A90 /* AudioListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +81,7 @@
 		3B1450C32934F80A003C5A90 = {
 			isa = PBXGroup;
 			children = (
-				3B1450CE2934F80A003C5A90 /* RandomEffectRecorder */,
+				3B1450CE2934F80A003C5A90 /* RandomEffectsRecorder */,
 				3B1450DF2934F80C003C5A90 /* RandomEffectRecorderTests */,
 				3B1450E92934F80C003C5A90 /* RandomEffectRecorderUITests */,
 				3B1450CD2934F80A003C5A90 /* Products */,
@@ -91,17 +91,17 @@
 		3B1450CD2934F80A003C5A90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B1450CC2934F80A003C5A90 /* RandomEffectRecorder.app */,
-				3B1450DC2934F80C003C5A90 /* RandomEffectRecorderTests.xctest */,
-				3B1450E62934F80C003C5A90 /* RandomEffectRecorderUITests.xctest */,
+				3B1450CC2934F80A003C5A90 /* RandomEffectsRecorder.app */,
+				3B1450DC2934F80C003C5A90 /* RandomEffectsRecorderTests.xctest */,
+				3B1450E62934F80C003C5A90 /* RandomEffectsRecorderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B1450CE2934F80A003C5A90 /* RandomEffectRecorder */ = {
+		3B1450CE2934F80A003C5A90 /* RandomEffectsRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				3B1451012935FAD1003C5A90 /* RandomEffectRecorderInfo.plist */,
+				3B1451012935FAD1003C5A90 /* RandomEffectsRecorderInfo.plist */,
 				3B1450CF2934F80A003C5A90 /* RandomEffectRecorderApp.swift */,
 				3B1450D12934F80A003C5A90 /* ContentView.swift */,
 				3B14510A2936387C003C5A90 /* AudioRecorder.swift */,
@@ -110,7 +110,7 @@
 				3B1450FB29358FC9003C5A90 /* Colors.xcassets */,
 				3B1450D52934F80C003C5A90 /* Preview Content */,
 			);
-			path = RandomEffectRecorder;
+			path = RandomEffectsRecorder;
 			sourceTree = "<group>";
 		};
 		3B1450D52934F80C003C5A90 /* Preview Content */ = {
@@ -141,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B1450CB2934F80A003C5A90 /* RandomEffectRecorder */ = {
+		3B1450CB2934F80A003C5A90 /* RandomEffectsRecorder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B1450F02934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectRecorder" */;
+			buildConfigurationList = 3B1450F02934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectsRecorder" */;
 			buildPhases = (
 				3B1450C82934F80A003C5A90 /* Sources */,
 				3B1450C92934F80A003C5A90 /* Frameworks */,
@@ -153,14 +153,14 @@
 			);
 			dependencies = (
 			);
-			name = RandomEffectRecorder;
+			name = RandomEffectsRecorder;
 			productName = R.E.R;
-			productReference = 3B1450CC2934F80A003C5A90 /* RandomEffectRecorder.app */;
+			productReference = 3B1450CC2934F80A003C5A90 /* RandomEffectsRecorder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3B1450DB2934F80C003C5A90 /* RandomEffectRecorderTests */ = {
+		3B1450DB2934F80C003C5A90 /* RandomEffectsRecorderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B1450F32934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectRecorderTests" */;
+			buildConfigurationList = 3B1450F32934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectsRecorderTests" */;
 			buildPhases = (
 				3B1450D82934F80C003C5A90 /* Sources */,
 				3B1450D92934F80C003C5A90 /* Frameworks */,
@@ -171,14 +171,14 @@
 			dependencies = (
 				3B1450DE2934F80C003C5A90 /* PBXTargetDependency */,
 			);
-			name = RandomEffectRecorderTests;
+			name = RandomEffectsRecorderTests;
 			productName = R.E.RTests;
-			productReference = 3B1450DC2934F80C003C5A90 /* RandomEffectRecorderTests.xctest */;
+			productReference = 3B1450DC2934F80C003C5A90 /* RandomEffectsRecorderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3B1450E52934F80C003C5A90 /* RandomEffectRecorderUITests */ = {
+		3B1450E52934F80C003C5A90 /* RandomEffectsRecorderUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B1450F62934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectRecorderUITests" */;
+			buildConfigurationList = 3B1450F62934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectsRecorderUITests" */;
 			buildPhases = (
 				3B1450E22934F80C003C5A90 /* Sources */,
 				3B1450E32934F80C003C5A90 /* Frameworks */,
@@ -189,9 +189,9 @@
 			dependencies = (
 				3B1450E82934F80C003C5A90 /* PBXTargetDependency */,
 			);
-			name = RandomEffectRecorderUITests;
+			name = RandomEffectsRecorderUITests;
 			productName = R.E.RUITests;
-			productReference = 3B1450E62934F80C003C5A90 /* RandomEffectRecorderUITests.xctest */;
+			productReference = 3B1450E62934F80C003C5A90 /* RandomEffectsRecorderUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3B1450C72934F80A003C5A90 /* Build configuration list for PBXProject "RandomEffectRecorder" */;
+			buildConfigurationList = 3B1450C72934F80A003C5A90 /* Build configuration list for PBXProject "RandomEffectsRecorder" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -230,9 +230,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B1450CB2934F80A003C5A90 /* RandomEffectRecorder */,
-				3B1450DB2934F80C003C5A90 /* RandomEffectRecorderTests */,
-				3B1450E52934F80C003C5A90 /* RandomEffectRecorderUITests */,
+				3B1450CB2934F80A003C5A90 /* RandomEffectsRecorder */,
+				3B1450DB2934F80C003C5A90 /* RandomEffectsRecorderTests */,
+				3B1450E52934F80C003C5A90 /* RandomEffectsRecorderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,12 +298,12 @@
 /* Begin PBXTargetDependency section */
 		3B1450DE2934F80C003C5A90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B1450CB2934F80A003C5A90 /* RandomEffectRecorder */;
+			target = 3B1450CB2934F80A003C5A90 /* RandomEffectsRecorder */;
 			targetProxy = 3B1450DD2934F80C003C5A90 /* PBXContainerItemProxy */;
 		};
 		3B1450E82934F80C003C5A90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B1450CB2934F80A003C5A90 /* RandomEffectRecorder */;
+			target = 3B1450CB2934F80A003C5A90 /* RandomEffectsRecorder */;
 			targetProxy = 3B1450E72934F80C003C5A90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -430,11 +430,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RandomEffectRecorder/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RandomEffectsRecorder/Preview Content\"";
 				DEVELOPMENT_TEAM = DW275526Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomEffectRecorderInfo.plist;
+				INFOPLIST_FILE = RandomEffectsRecorderInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = R.E.Recorder;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions.";
@@ -448,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.imael.RandomEffectRecorder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imael.RandomEffectsRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -463,11 +463,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RandomEffectRecorder/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RandomEffectsRecorder/Preview Content\"";
 				DEVELOPMENT_TEAM = DW275526Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomEffectRecorderInfo.plist;
+				INFOPLIST_FILE = RandomEffectsRecorderInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = R.E.Recorder;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions.";
@@ -481,7 +481,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.imael.RandomEffectRecorder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imael.RandomEffectsRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -505,7 +505,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandomEffectRecorder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RandomEffectRecorder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandomEffectsRecorder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RandomEffectsRecorder";
 			};
 			name = Debug;
 		};
@@ -525,7 +525,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandomEffectRecorder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RandomEffectRecorder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandomEffectsRecorder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RandomEffectsRecorder";
 			};
 			name = Release;
 		};
@@ -568,7 +568,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B1450C72934F80A003C5A90 /* Build configuration list for PBXProject "RandomEffectRecorder" */ = {
+		3B1450C72934F80A003C5A90 /* Build configuration list for PBXProject "RandomEffectsRecorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B1450EE2934F80C003C5A90 /* Debug */,
@@ -577,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B1450F02934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectRecorder" */ = {
+		3B1450F02934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectsRecorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B1450F12934F80C003C5A90 /* Debug */,
@@ -586,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B1450F32934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectRecorderTests" */ = {
+		3B1450F32934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectsRecorderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B1450F42934F80C003C5A90 /* Debug */,
@@ -595,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B1450F62934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectRecorderUITests" */ = {
+		3B1450F62934F80C003C5A90 /* Build configuration list for PBXNativeTarget "RandomEffectsRecorderUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B1450F72934F80C003C5A90 /* Debug */,
