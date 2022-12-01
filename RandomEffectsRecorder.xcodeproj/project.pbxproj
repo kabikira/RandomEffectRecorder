@@ -14,9 +14,9 @@
 		3B1450E12934F80C003C5A90 /* RandomEffectRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1450E02934F80C003C5A90 /* RandomEffectRecorderTests.swift */; };
 		3B1450EB2934F80C003C5A90 /* RandomEffectRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1450EA2934F80C003C5A90 /* RandomEffectRecorderTests.swift */; };
 		3B1450ED2934F80C003C5A90 /* RandomEffectRecorderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1450EC2934F80C003C5A90 /* RandomEffectRecorderUITestsLaunchTests.swift */; };
-		3B1450FC29358FC9003C5A90 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1450FB29358FC9003C5A90 /* Colors.xcassets */; };
 		3B14510B2936387C003C5A90 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14510A2936387C003C5A90 /* AudioRecorder.swift */; };
 		3B14510D29363973003C5A90 /* AudioListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14510C29363973003C5A90 /* AudioListView.swift */; };
+		3B14512129384997003C5A90 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B14512029384997003C5A90 /* Color.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +47,10 @@
 		3B1450E62934F80C003C5A90 /* RandomEffectsRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomEffectsRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1450EA2934F80C003C5A90 /* RandomEffectRecorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEffectRecorderTests.swift; sourceTree = "<group>"; };
 		3B1450EC2934F80C003C5A90 /* RandomEffectRecorderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEffectRecorderUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3B1450FB29358FC9003C5A90 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = ../../RandomEffectsVoiceRecorder/RandomEffectsVoiceRecorder/Colors.xcassets; sourceTree = "<group>"; };
 		3B1451012935FAD1003C5A90 /* RandomEffectsRecorderInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RandomEffectsRecorderInfo.plist; sourceTree = SOURCE_ROOT; };
 		3B14510A2936387C003C5A90 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		3B14510C29363973003C5A90 /* AudioListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioListView.swift; sourceTree = "<group>"; };
+		3B14512029384997003C5A90 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +104,10 @@
 				3B1451012935FAD1003C5A90 /* RandomEffectsRecorderInfo.plist */,
 				3B1450CF2934F80A003C5A90 /* RandomEffectRecorderApp.swift */,
 				3B1450D12934F80A003C5A90 /* ContentView.swift */,
-				3B14510A2936387C003C5A90 /* AudioRecorder.swift */,
 				3B14510C29363973003C5A90 /* AudioListView.swift */,
+				3B14510A2936387C003C5A90 /* AudioRecorder.swift */,
 				3B1450D32934F80C003C5A90 /* Assets.xcassets */,
-				3B1450FB29358FC9003C5A90 /* Colors.xcassets */,
+				3B14512029384997003C5A90 /* Color.xcassets */,
 				3B1450D52934F80C003C5A90 /* Preview Content */,
 			);
 			path = RandomEffectsRecorder;
@@ -242,9 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1450FC29358FC9003C5A90 /* Colors.xcassets in Resources */,
 				3B1450D72934F80C003C5A90 /* Preview Assets.xcassets in Resources */,
 				3B1450D42934F80C003C5A90 /* Assets.xcassets in Resources */,
+				3B14512129384997003C5A90 /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

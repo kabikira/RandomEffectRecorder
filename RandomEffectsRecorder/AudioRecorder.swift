@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import Combine
+import UIKit
 
 
 class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
@@ -23,6 +24,8 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
     let engine = AVAudioEngine()
     
     var audioPlayer = AVAudioPlayer()
+    
+    var sampleRate: Double = 0
     
     let objectWillChange = PassthroughSubject<AudioRecorder, Never>()
     
@@ -59,11 +62,19 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
         
         // エフェクターをかける順番をきめるランダム
         let number = Int.random(in: 0...5)
+        // iPhoneかiPadか判定しサンプルレート設定
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            sampleRate = 44100
+            print("iPhone!!!!!!!!")
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            sampleRate = 48000
+            print("iPad!!!!!!!")
+        }
         
         
         do {
             
-            let format = AVAudioFormat(commonFormat: .pcmFormatFloat32  , sampleRate: 44100, channels: 1 , interleaved: true)
+            let format = AVAudioFormat(commonFormat: .pcmFormatFloat32  , sampleRate: sampleRate, channels: 1 , interleaved: true)
             
             // オーディオファイル
             let audioFile2 = try AVAudioFile(forWriting: getAudioFileUrl(), settings: format!.settings)
