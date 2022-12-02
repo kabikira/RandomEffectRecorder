@@ -64,11 +64,40 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
         let number = Int.random(in: 0...5)
         // iPhoneかiPadか判定しサンプルレート設定
         if UIDevice.current.userInterfaceIdiom == .phone {
-            sampleRate = 44100
-            print("iPhone!!!!!!!!")
+            sampleRate = 48000
+            print("iPhone!!!!!!!!",UIScreen.main.nativeBounds.height)
+            // カーネル情報を取得
+            var systemInfo = utsname()
+            uname(&systemInfo)
+            
+            let mirror = Mirror(reflecting: systemInfo.machine)
+            var identifier = ""
+            
+            for child in mirror.children {
+                if let value = child.value as? Int8, value != 0 {
+                    identifier.append(UnicodeScalar(UInt8(bitPattern: value)).description)
+                }
+            }
+            print(identifier)
+            print(sampleRate)
+            if identifier == "iPhone10,1" {
+                sampleRate = 44100
+                print(sampleRate)
+            } else if identifier == "iPhone9,2" {
+                sampleRate = 44100
+                print(sampleRate)
+            } else if identifier == "iPhone9,1" {
+                sampleRate = 44100
+                print(sampleRate)
+            } else if identifier == "iPhone8,4" {
+                sampleRate = 44100
+                print(sampleRate)
+            }
+            
         } else if UIDevice.current.userInterfaceIdiom == .pad {
             sampleRate = 48000
             print("iPad!!!!!!!")
+            print(sampleRate)
         }
         
         
@@ -97,19 +126,19 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
             reverbNode.wetDryMix = Float.random(in: 0...100)
             engine.attach(reverbNode)
             
-//            // EQ
-//            let eqNode = AVAudioUnitEQ(numberOfBands: 2)
-//            eqNode.bands[0].bypass = false
-//            eqNode.bands[0].filterType = .parametric
-//            eqNode.bands[0].frequency = 2
-//            eqNode.bands[0].bandwidth = 1
-//
-//            eqNode.bands[1].bypass = false
-//            eqNode.bands[1].filterType = .parametric
-//            eqNode.bands[1].frequency = 20000
-//            eqNode.bands[1].bandwidth = 1
-//            eqNode.globalGain = 24
-//            engine.attach(eqNode)
+            //            // EQ
+            //            let eqNode = AVAudioUnitEQ(numberOfBands: 2)
+            //            eqNode.bands[0].bypass = false
+            //            eqNode.bands[0].filterType = .parametric
+            //            eqNode.bands[0].frequency = 2
+            //            eqNode.bands[0].bandwidth = 1
+            //
+            //            eqNode.bands[1].bypass = false
+            //            eqNode.bands[1].filterType = .parametric
+            //            eqNode.bands[1].frequency = 20000
+            //            eqNode.bands[1].bandwidth = 1
+            //            eqNode.globalGain = 24
+            //            engine.attach(eqNode)
             
             // ノード同士を接続 (inputNode -> delay)
             let inputNode = engine.inputNode
@@ -157,7 +186,7 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
             engine.connect(inputNode, to: node1, format: format)
             engine.connect(node1, to: node2, format: format)
             engine.connect(node2, to: node3, format: format)
-          
+            
             // 出力バスにタップをインストール
             node3.installTap(onBus: 0, bufferSize: 4096, format: format) { (buffer, when) in
                 do {
@@ -189,7 +218,7 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
             audioPlayer.prepareToPlay()
             audioPlayer.delegate = self
             // 音量
-            audioPlayer.volume = 2.0
+            audioPlayer.volume = 10.0
             audioPlayer.play()
             isPlaying = true
             
