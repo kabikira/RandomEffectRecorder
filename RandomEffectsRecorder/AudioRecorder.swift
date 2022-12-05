@@ -63,7 +63,25 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
         // エフェクターをかける順番をきめるランダム
         let number = Int.random(in: 0...5)
         // iPhoneかiPadか判定しサンプルレート設定
-        if UIDevice.current.userInterfaceIdiom == .phone {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            sampleRate = 48000
+            // カーネル情報を取得
+            var systemInfo = utsname()
+            uname(&systemInfo)
+            
+            let mirror = Mirror(reflecting: systemInfo.machine)
+            var identifier = ""
+            
+            for child in mirror.children {
+                if let value = child.value as? Int8, value != 0 {
+                    identifier.append(UnicodeScalar(UInt8(bitPattern: value)).description)
+                }
+            }
+            print(identifier)
+            print("iPad!!!!!!!")
+            print(sampleRate)
+            
+        }else if UIDevice.current.userInterfaceIdiom == .phone {
             sampleRate = 48000
             print("iPhone!!!!!!!!",UIScreen.main.nativeBounds.height)
             // カーネル情報を取得
@@ -93,11 +111,6 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
                 sampleRate = 44100
                 print(sampleRate)
             }
-            
-        } else if UIDevice.current.userInterfaceIdiom == .pad {
-            sampleRate = 48000
-            print("iPad!!!!!!!")
-            print(sampleRate)
         }
         
         
@@ -218,7 +231,7 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
             audioPlayer.prepareToPlay()
             audioPlayer.delegate = self
             // 音量
-            audioPlayer.volume = 10.0
+            audioPlayer.volume = 100.0
             audioPlayer.play()
             isPlaying = true
             
@@ -238,3 +251,4 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
     
     
 }
+
