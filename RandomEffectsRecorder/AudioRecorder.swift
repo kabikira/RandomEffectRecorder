@@ -25,7 +25,7 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
     
     var audioPlayer = AVAudioPlayer()
     
-    var sampleRate: Double = 0
+    var sampleRate: Double = 48000
     
     let objectWillChange = PassthroughSubject<AudioRecorder, Never>()
     
@@ -62,56 +62,6 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
         
         // エフェクターをかける順番をきめるランダム
         let number = Int.random(in: 0...5)
-        // iPhoneかiPadか判定しサンプルレート設定
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            sampleRate = 48000
-            // カーネル情報を取得
-            var systemInfo = utsname()
-            uname(&systemInfo)
-            
-            let mirror = Mirror(reflecting: systemInfo.machine)
-            var identifier = ""
-            
-            for child in mirror.children {
-                if let value = child.value as? Int8, value != 0 {
-                    identifier.append(UnicodeScalar(UInt8(bitPattern: value)).description)
-                }
-            }
-            print(identifier)
-            print("iPad!!!!!!!")
-            print(sampleRate)
-            
-        }else if UIDevice.current.userInterfaceIdiom == .phone {
-            sampleRate = 48000
-            print("iPhone!!!!!!!!",UIScreen.main.nativeBounds.height)
-            // カーネル情報を取得
-            var systemInfo = utsname()
-            uname(&systemInfo)
-            
-            let mirror = Mirror(reflecting: systemInfo.machine)
-            var identifier = ""
-            
-            for child in mirror.children {
-                if let value = child.value as? Int8, value != 0 {
-                    identifier.append(UnicodeScalar(UInt8(bitPattern: value)).description)
-                }
-            }
-            print(identifier)
-            print(sampleRate)
-            if identifier == "iPhone10,1" {
-                sampleRate = 44100
-                print(sampleRate)
-            } else if identifier == "iPhone9,2" {
-                sampleRate = 44100
-                print(sampleRate)
-            } else if identifier == "iPhone9,1" {
-                sampleRate = 44100
-                print(sampleRate)
-            } else if identifier == "iPhone8,4" {
-                sampleRate = 44100
-                print(sampleRate)
-            }
-        }
         
         
         do {
