@@ -60,7 +60,7 @@ struct RecordingRow: View {
 }
 class RecordedAudio {
     var recodingList = [URL]()
-    // 録音したリスト表示
+    // Recorded list view
     func audioDatas() -> [URL]{
         
         let fileManager = FileManager.default
@@ -68,13 +68,13 @@ class RecordedAudio {
         let directoryContents = try! fileManager.contentsOfDirectory(at: documentDirectory, includingPropertiesForKeys: nil)
         for recodings in directoryContents {
             recodingList.append(recodings)
-            // リスト並び替えで新しい録音が上に足される
+           
             recodingList.sort(by: {$0.lastPathComponent > $1.lastPathComponent})
         }
         
         return recodingList
     }
-    // iPhoneファイルから削除
+    // Delete from iPhone files
     func deleteRecording(urlsToDelete: [URL]) {
         for url in urlsToDelete {
             print(url)

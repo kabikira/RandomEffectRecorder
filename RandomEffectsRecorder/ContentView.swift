@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var nowRecording = false // これは削除できる
+    @State var nowRecording = false 
     @State var allowsHisTesthig = true
     @ObservedObject var auidoRecorder = AudioRecorder()
     
@@ -17,13 +17,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                // 録音したファイルリスト表示
+                
                 AudioListView()
                     .allowsHitTesting(allowsHisTesthig)
                 
                 VStack {
                     if !nowRecording {
-                        // if auidoRecorder.recording == false{
+                       
                         Button (action: {
                             auidoRecorder.record()
                             nowRecording = true

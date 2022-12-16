@@ -13,14 +13,14 @@ import UIKit
 
 class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
     
-    // オプショナル型nilを許容
+    
     var audioRecorder: AVAudioRecorder!
-    // 録音開始時のDataを入れる
+    
     var recDate: Date!
     
-    //    var audioFile: AVAudioFile!
+  
     var playerNode: AVAudioPlayerNode!
-    //    @Published var recordingDatas: [URL] = []
+   
     let engine = AVAudioEngine()
     
     var audioPlayer = AVAudioPlayer()
@@ -38,7 +38,7 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
         }
     }
     
-    //日付Dateを文字列に変換する関数
+    
     func dateToString(dateValue: Date) -> String{
         let df = DateFormatter()
         //        df.dateFormat = "yyyy/MM/dd HH:mm:ss"
@@ -46,10 +46,10 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
         df.timeStyle = .medium
         return String(df.string(from: dateValue))
     }
-    //音声ファイル書き込み関数
+    //Audio File Writing Function
     func getAudioFileUrl() -> URL {
         guard let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            fatalError("ファイルURL取得エラー")
+            fatalError("File URL get error")
         }
         let audioUrl = paths.appendingPathComponent("\(dateToString(dateValue: recDate)).caf")
         //        let audioUrl = paths.appendingPathComponent("unnko.caf")
@@ -60,7 +60,7 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
     func record() {
         recDate = Date()
         
-        // エフェクターをかける順番をきめるランダム
+        // Random to determine the order in which effectors are applied.
         let number = Int.random(in: 0...5)
         
         
@@ -68,8 +68,8 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
             
             let format = AVAudioFormat(commonFormat: .pcmFormatFloat32  , sampleRate: sampleRate, channels: 1 , interleaved: true)
             
-            // オーディオファイル
-            let audioFile2 = try AVAudioFile(forWriting: getAudioFileUrl(), settings: format!.settings)
+          
+            let audioFile = try AVAudioFile(forWriting: getAudioFileUrl(), settings: format!.settings)
             
             let delayNode = AVAudioUnitDelay()
             delayNode.delayTime = Float64.random(in: 0.1...2)
@@ -77,13 +77,13 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
             delayNode.wetDryMix = Float.random(in: 0...100)
             engine.attach(delayNode)
             
-            //ディストーション
+            
             let distortionNode = AVAudioUnitDistortion()
             distortionNode.loadFactoryPreset(AVAudioUnitDistortionPreset(rawValue: Int.random(in: 0...17))!)
             distortionNode.wetDryMix = Float.random(in: 0...100)
             distortionNode.preGain = -6
             engine.attach(distortionNode)
-            // リバーブ
+            
             let reverbNode = AVAudioUnitReverb()
             reverbNode.loadFactoryPreset(AVAudioUnitReverbPreset(rawValue: Int.random(in: 0...12))!)
             reverbNode.wetDryMix = Float.random(in: 0...100)
@@ -103,7 +103,7 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
             //            eqNode.globalGain = 24
             //            engine.attach(eqNode)
             
-            // ノード同士を接続 (inputNode -> delay)
+            
             let inputNode = engine.inputNode
             
             var node1: AVAudioNode = delayNode
@@ -145,22 +145,22 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
             default:
                 break
             }
-            //            let mixerNode = engine.mainMixerNode
+           
             engine.connect(inputNode, to: node1, format: format)
             engine.connect(node1, to: node2, format: format)
             engine.connect(node2, to: node3, format: format)
             
-            // 出力バスにタップをインストール
+            // Install taps on output buses
             node3.installTap(onBus: 0, bufferSize: 4096, format: format) { (buffer, when) in
                 do {
-                    try audioFile2.write(from: buffer)
+                    try audioFile.write(from: buffer)
                 } catch let error {
                     print("audioFile.writeFromBuffer error:", error)
                 }
             }
             
             do {
-                // エンジンを開始
+               
                 try engine.start()
             } catch let error {
                 print("engine.start error:", error)
@@ -177,11 +177,12 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
     func playSound(audio: URL) {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: audio)
-            //音楽をバッファに読み込んでおく
+            // load music into buffer
             audioPlayer.prepareToPlay()
             audioPlayer.delegate = self
             // 音量
             audioPlayer.volume = 1.0
+            
             audioPlayer.play()
             isPlaying = true
             
