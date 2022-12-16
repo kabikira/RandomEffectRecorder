@@ -181,7 +181,7 @@ class AudioRecorder: NSObject, ObservableObject, AVAudioPlayerDelegate {
             audioPlayer.prepareToPlay()
             audioPlayer.delegate = self
             // 音量
-            audioPlayer.volume = 100.0
+            audioPlayer.volume = 1.0
             audioPlayer.play()
             isPlaying = true
             
