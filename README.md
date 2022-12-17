@@ -1,7 +1,7 @@
 # RandomEffectRecorder
 This App is a recorder with random effects.
 # Requirements
-We use SwiftUI so you need to target iOS 13+ and macOS 10.15+.
+We use SwiftUI so you need to target iOS 14.
 # Contributions
 Issues and PRs are welcome, even for minor improvements and corrections.
 # Features
